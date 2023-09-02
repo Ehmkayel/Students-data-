@@ -1,0 +1,91 @@
+body {
+    background-color: #e29be2;
+    background: linear-gradient(to right, #a058a0 60%, #9a2a9a);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+caption {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: rgb(233, 185, 233);
+}
+
+thead th {
+    color: plum;
+    background-color: purple;
+    text-align: left;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px
+}
+
+tr:nth-child(even) {
+    background-color: rgb(174, 77, 174);
+}
+
+tfoot {
+    color: plum;
+    background-color: purple;
+}
+
+@media (max-width: 700px) {
+    td {
+        display: block;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 15px;
+        padding-left: 20%;
+        position: relative;
+    }
+    th {
+        display: none;
+    }
+    td::before {
+        content: attr(data-cell);
+        position: absolute;
+        text-align: left;
+        left: 0;
+        width: 50%;
+    }
+}
+
+@media (max-width: 412px) {
+    table {
+        width: 100%;
+    }
+    td {
+        display: block;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 15px;
+        padding-left: 20%;
+        position: relative;
+    }
+    th {
+        display: none;
+    }
+    td::before {
+        content: attr(data-cell);
+        position: absolute;
+        text-align: left;
+        left: 0;
+        width: 100%;
+    }
+}
